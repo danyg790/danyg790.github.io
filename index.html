@@ -1,0 +1,2330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DJ Dev - Home</title>
+    <link rel="icon" href="/assets/images/favicon.png" />
+
+    <link
+      rel="stylesheet"
+      id="bootstrap-css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      id="fa-css"
+      href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="fa-shims-css"
+      href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="owl-carousel-css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      id="dj-lightbox-css"
+      href="https://cdn.jsdelivr.net/gh/danyg790/dj-lightbox@main/dist/css/dj-lightbox.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--<link rel="stylesheet" id="main-styles" href="https://cdn.jsdelivr.net/gh/danyg790/CMSFiles@main/assets/css/style.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>-->
+    <link href="../style.css" rel="stylesheet" />
+    <style>
+      /* style vars */
+      :root {
+        --max-cont-width: 1230px;
+        --col-12: 1230px;
+        --col-12-max: calc(100% - 50px);
+        --col-12-inner: 1200px;
+        --col-11: 1127.500000041px;
+        --col-11-max: calc(91.66666667% - (50px * 0.9166666667));
+        --col-11-inner: 1097.500000041px;
+        --col-10: 1024.999999959px;
+        --col-10-max: calc(83.33333333% - (50px * 0.8333333333));
+        --col-10-inner: 994.999999959px;
+        --col-4-5: 984px;
+        --col-4-5-max: calc(80% - (50px * 0.8));
+        --col-4-5-inner: 954px;
+        --col-9: 922.5px;
+        --col-9-max: calc(75% - (50px * 0.75));
+        --col-9-inner: 892.5px;
+        --col-8: 820.0000000409999px;
+        --col-8-max: calc(66.66666667% - (50px * 0.6666666667));
+        --col-8-inner: 790.0000000409999px;
+        --col-3-5: 738px;
+        --col-3-5-max: calc(60% - (50 * 0.6));
+        --col-3-5-inner: 708px;
+        --col-7: 717.4999999590001px;
+        --col-7-max: calc(58.33333333% - (50px * 0.5833333333));
+        --col-7-inner: 687.4999999590001px;
+        --col-6: 615px;
+        --col-6-max: calc(50% - (50px * 0.5));
+        --col-6-inner: 585px;
+        --col-5: 512.500000041px;
+        --col-5-max: calc(41.66666667 - (50px * 0.4166666667));
+        --col-5-inner: 482.500000041px;
+        --col-2-5: 492px;
+        --col-2-5-max: calc(40% - (50px * 0.4));
+        --col-2-5-inner: 462px;
+        --col-4: 409.999999959px;
+        --col-4-max: calc(33.33333333% - (50px * 0.3333333333));
+        --col-4-inner: 379.999999959px;
+        --col-3: 307.5px;
+        --col-3-max: calc(25% - (50px * 0.25));
+        --col-3-inner: 277.5px;
+        --col-1-5: 246px;
+        --col-1-5-max: calc(20% - (50px * 0.2));
+        --col-1-5-inner: 216px;
+        --col-2: 205.000000041px;
+        --col-2-max: calc(16.66666667% - (50px * 0.1666666667));
+        --col-2-inner: 175.000000041px;
+        --col-1: 102.49999995900001px;
+        --col-1-max: calc(8.33333333% - (50px * 0.0833333333));
+        --col-1-inner: 72.49999995900001px;
+        --primary-color: #006199;
+        --secondary-color: #ff6100;
+        --tertiary-color: #3b3b40;
+        --quarternary-color: #66757a;
+      }
+
+      /* select styles */
+      ::-moz-selection {
+        background: #006199;
+        color: #ffffff;
+        text-shadow: none;
+      }
+      ::selection {
+        background: #006199;
+        color: #ffffff;
+        text-shadow: none;
+      }
+
+      /* scroll bar styles */
+      html::-webkit-scrollbar {
+        width: 15px;
+        height: 15px;
+        background-color: #e2e4e6;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+      html::-webkit-scrollbar-track {
+        width: 11px;
+        background-color: #e2e4e6;
+        border: 2px solid #3b3b40;
+      }
+      html::-webkit-scrollbar-thumb {
+        width: 11px;
+        border-radius: 15px 16px 16px 15px;
+        background-color: #3b3b40;
+      }
+      html::-webkit-scrollbar-corner {
+        width: 11px;
+        background-color: #e2e4e6;
+        border-color: #e2e4e6;
+      }
+
+      /* topbar */
+      .topbar {
+        background: #006199;
+        color: #ffffff;
+      }
+      .topbar a:not(.btn) {
+        color: #ffffff;
+      }
+      .topbar .accnt,
+      .topbar a.lgi,
+      .topbar .lgi a {
+        background: #006199;
+        border-color: #006199;
+        color: #ffffff;
+      }
+      .topbar .accnt:hover,
+      .topbar .accnt:focus,
+      .topbar a.lgi:hover,
+      .topbar a.lgi:focus,
+      .topbar .lgi a:hover,
+      .topbar .lgi a:focus {
+        background: transparent;
+        border-color: #006199;
+        color: #006199;
+      }
+
+      /* header social styles */
+      .navbar-st .social a {
+        background: #006199;
+        border: 2px solid #006199;
+        color: #ffffff;
+      }
+      .navbar-st .social a:hover,
+      .navbar-st .social a:focus {
+        background: #006199;
+        border-color: #006199;
+        color: #ffffff;
+      }
+
+      /* header styles */
+      .navbar-st {
+        background: #000000;
+        color: #e2e4e6;
+      }
+      .search_bar {
+        color: #e2e4e6;
+      }
+
+      /* menu styles */
+      .slidein .navbar-collapse {
+        background: #000000;
+      }
+      nav .nav > li > a,
+      .topbar .nav > li > a {
+        background: transparent;
+        color: #e2e4e6;
+      }
+      nav .nav > li > a:hover,
+      nav .nav > li > a:focus,
+      .topbar .nav > li > a:hover,
+      .topbar .nav > li > a:focus {
+        background: transparent;
+        color: #006199;
+      }
+      nav .nav > li.current-menu-item > a,
+      nav .nav > li.current-menu-ancestor > a,
+      nav .nav > li .current-menu-item > a,
+      nav .nav > li .current-menu-ancestor > a,
+      .topbar .nav > li.current-menu-item > a,
+      .topbar .nav > li.current-menu-ancestor > a,
+      .topbar .nav > li .current-menu-item > a,
+      .topbar .nav > li .current-menu-ancestor > a,
+      .navbar-collapse.collapsing li.current-menu-item > a,
+      .navbar-collapse.collapse.in li.current-menu-item > a,
+      .navbar-collapse.collapsing li.current-menu-ancestor > a,
+      .navbar-collapse.collapse.in li.current-menu-ancestor > a {
+        background: transparent;
+        color: #006199;
+      }
+      nav .nav > li > ul li.mega_head > a,
+      .topbar .nav > li > ul li.mega_head > a {
+        background: transparent;
+        color: #006199;
+      }
+
+      /* menu dropdown styles */
+      @media (min-width: 830px) {
+        .dropdown > a:after {
+          content: "0d7";
+          font-family: "Font Awesome 5 Free";
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+      nav .nav > li ul,
+      .topbar .nav > li ul,
+      .site-header-cart .widget_shopping_cart {
+        background: #000000;
+      }
+      nav .nav > li ul a,
+      .topbar .nav > li ul a {
+        background: #000000;
+        color: #e2e4e6;
+      }
+      nav .nav > li ul a:hover,
+      nav .nav > li ul a:focus,
+      .topbar .nav > li ul a:hover,
+      .topbar .nav > li ul a:focus {
+        background: transparent;
+        color: #006199;
+      }
+
+      /* toggle btn styles */
+      .navbar-toggle {
+        background: #006199;
+        border-color: #006199;
+      }
+      .navbar-toggle .icon-bar {
+        background-color: #e2e4e6;
+      }
+      .navbar-toggle:hover,
+      .navbar-toggle:focus {
+        background: #006199;
+        border-color: #006199;
+      }
+      .navbar-toggle:hover .icon-bar,
+      .navbar-toggle:focus .icon-bar {
+        background-color: #e2e4e6;
+      }
+
+      /* mobile menu container styles */
+      .navbar-collapse.collapsing,
+      .navbar-collapse.collapse.in,
+      nav .navbar-collapse.collapsing .nav > li ul,
+      .topbar .navbar-collapse.collapsing .nav > li ul,
+      nav .navbar-collapse.collapse.in .nav > li ul,
+      .topbar .navbar-collapse.collapse.in .nav > li ul {
+        background: #000000;
+      }
+      .navbar-collapse.collapsing li > a,
+      .navbar-collapse.collapse.in li > a,
+      nav .navbar-collapse.collapsing .nav > li ul a,
+      .topbar .navbar-collapse.collapsing .nav > li ul a,
+      nav .navbar-collapse.collapse.in .nav > li ul a,
+      .topbar .navbar-collapse.collapse.in .nav > li ul a {
+        background: transparent;
+        color: #e2e4e6;
+      }
+      .navbar-collapse.collapsing li > a:hover,
+      .navbar-collapse.collapsing li > a:focus,
+      .navbar-collapse.collapse.in li > a:hover,
+      .navbar-collapse.collapse.in li > a:focus,
+      nav .navbar-collapse.collapsing .nav > li ul a:hover,
+      nav .navbar-collapse.collapsing .nav > li ul a:focus,
+      nav .navbar-collapse.collapse.in .nav > li ul a:hover,
+      nav .navbar-collapse.collapse.in .nav > li ul a:focus,
+      .topbar .navbar-collapse.collapsing .nav > li ul a:hover,
+      .topbar .navbar-collapse.collapsing .nav > li ul a:focus,
+      .topbar .navbar-collapse.collapse.in .nav > li ul a:hover,
+      .topbar .navbar-collapse.collapse.in .nav > li ul a:focus {
+        background: transparent;
+        color: #e2e4e6;
+      }
+
+      /* header btn styles */
+      .btn_top {
+        background: #006199;
+        border: 2px solid #006199;
+        color: #ffffff;
+        padding-top: 6px;
+        padding-right: 15px;
+        padding-bottom: 6px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .btn_top:hover,
+      .btn_top:focus {
+        background: transparent;
+        border-color: #006199;
+        color: #006199;
+      }
+
+      /* breadcrumb styles */
+      .breadcrumbs_cont {
+        background: #e2e4e6;
+        color: #006199;
+      }
+      .breadcrumbs_cont a:not(.btn) {
+        color: #006199;
+      }
+      .breadcrumbs_cont a:not(.btn):hover {
+        color: #3b3b40;
+      }
+
+      /* title styles */
+      .entry-header {
+        background: #006199;
+        color: #e2e4e6;
+      }
+      .entry-header h1,
+      .entry-header h2,
+      .entry-header a {
+        color: #e2e4e6;
+      }
+      .entry-header .breadcrumbs a:not(.btn) {
+        color: #ffffff;
+      }
+      .entry-header .breadcrumbs a:not(.btn):hover {
+        color: #3b3b40;
+      }
+
+      /* container styles */
+      .grid-inner,
+      .inner_cont {
+        max-width: 1200px;
+        margin: auto;
+        float: none;
+      }
+      /* default row */
+      .row > .inner_cont {
+        max-width: 1230px;
+      }
+
+      /* stretch row */
+      .row[data-vc-full-width] > .inner_cont {
+        max-width: 100%;
+      }
+      .row[data-vc-full-width]:not([data-vc-stretch-content])
+        .wpb_column
+        .vc_column-inner
+        > .wpb_wrapper {
+        width: 100%;
+      }
+      .row[data-vc-full-width]:not([data-vc-stretch-content])
+        .wpb_column:first-child
+        .vc_column-inner
+        > .wpb_wrapper,
+      .row[data-vc-full-width]:not(
+          [data-vc-stretch-content]
+        ).vc_rtl-columns-reverse
+        .wpb_column:last-child
+        .vc_column-inner
+        > .wpb_wrapper {
+        float: right;
+      }
+      .row[data-vc-full-width]:not([data-vc-stretch-content])
+        .wpb_column:last-child
+        .vc_column-inner
+        > .wpb_wrapper,
+      .row[data-vc-full-width]:not(
+          [data-vc-stretch-content]
+        ).vc_rtl-columns-reverse
+        .wpb_column:first-child
+        .vc_column-inner
+        > .wpb_wrapper {
+        float: left;
+      }
+
+      /* stretch row and content */
+      .row[data-vc-stretch-content].row-no-padding
+        .wpb_column
+        .vc_column-inner
+        > .wpb_wrapper,
+      .row[data-vc-stretch-content].row-no-padding
+        .wpb_column:first-child
+        .vc_column-inner
+        > .wpb_wrapper,
+      .row[data-vc-stretch-content].row-no-padding
+        .wpb_column:last-child
+        .vc_column-inner
+        > .wpb_wrapper {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+      }
+
+      body,
+      .main_cont {
+        background: #ffffff;
+        color: #000000;
+      }
+
+      /* element styles */
+      /* table styles */
+      table:not(.style_free) {
+        background-color: #ffffff;
+        border: 2px solid rgba(213, 217, 226, 0.25);
+        border-radius: 2px;
+      }
+      table:not(.style_free) tr th,
+      table:not(.style_free) tr:nth-child(even) th,
+      table:not(.style_free) tr:nth-child(odd) th {
+        background-color: #0c1220;
+        border: 2px solid rgba(213, 217, 226, 0.25);
+        color: #ffffff;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+      }
+      table:not(.style_free) td {
+        background-color: #ffffff;
+        border: 2px solid rgba(213, 217, 226, 0.25);
+        color: #1d1d1d;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+      }
+      table:not(.style_free) tr:nth-child(2n) td {
+        background-color: rgba(229, 233, 237, 0.7);
+        border-color: rgba(213, 217, 226, 0.25);
+        color: #1d1d1d;
+      }
+      table:not(.style_free) tr:hover td,
+      table:not(.style_free) > tbody > tr:nth-child(2n):hover > td,
+      table:not(.style_free) > tbody > tr:nth-child(2n + 1):hover > td,
+      table:not(.style_free) tr th,
+      table:not(.style_free) tr:nth-child(even):hover td,
+      table:not(.style_free) tr:nth-child(odd):hover td {
+        background-color: rgba(0, 97, 153, 0.7);
+        border-color: rgba(213, 217, 226, 0.25);
+        color: #ffffff;
+      }
+      table a {
+        color: #1d1d1d;
+      }
+      table a:hover {
+        color: #006199;
+      }
+
+      /* input styles */
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="number"],
+      input[type="password"],
+      input[type="search"],
+      select,
+      textarea,
+      .select2-container--default .select2-selection--single,
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="date"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="datetime"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="datetime-local"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="email"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="month"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="number"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="password"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="range"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="search"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="tel"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="text"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="time"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="url"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-field-container
+        input[type="week"],
+      div.wpforms-container .wpforms-form .wpforms-field-container select,
+      div.wpforms-container .wpforms-form .wpforms-field-container textarea {
+        background-color: #3b3b40;
+        border: 2px solid #3b3b40;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .select2-container--default
+        .select2-selection--single
+        .select2-selection__rendered {
+        color: #ffffff;
+      }
+      button,
+      input[type="button"],
+      input[type="reset"],
+      input[type="submit"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        input[type="submit"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        button[type="submit"],
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        .wpforms-page-button {
+        background: #006199;
+        border: 2px solid #006199;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      button:hover,
+      input[type="button"]:hover,
+      input[type="reset"]:hover,
+      input[type="submit"]:hover,
+      button:focus,
+      input[type="button"]:focus,
+      input[type="reset"]:focus,
+      input[type="submit"]:focus,
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        input[type="submit"]:hover,
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        button[type="submit"]:hover,
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        .wpforms-page-button:hover,
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        input[type="submit"]:focus,
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        button[type="submit"]:focus,
+      div.wpforms-container
+        .wpforms-form
+        .wpforms-submit-container
+        .wpforms-page-button:focus {
+        background: transparent;
+        border-color: #006199;
+        color: #006199;
+      }
+      ::-webkit-input-placeholder {
+        color: #ffffff;
+      }
+      ::placeholder {
+        color: #ffffff;
+      }
+      :-ms-input-placeholder {
+        color: #ffffff;
+      }
+      ::-moz-placeholder {
+        color: #ffffff;
+      }
+      :-moz-placeholder {
+        color: #ffffff;
+      }
+
+      /* main btn styles */
+      .btn_prim {
+        background: #006199;
+        border: 2px solid #006199;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .btn_prim:hover,
+      .btn_prim:focus {
+        background: transparent;
+        border-color: #006199;
+        color: #006199;
+      }
+      .btn_prim.btn_rev {
+        background: transparent;
+        border-color: #006199;
+        color: #006199;
+      }
+      .btn_prim.btn_rev:hover,
+      .btn_prim.btn_rev:focus {
+        background: #006199;
+        border-color: #006199;
+        color: #ffffff;
+      }
+
+      .btn_sec {
+        background: #ff6100;
+        border: 2px solid #ff6100;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .btn_sec:hover,
+      .btn_sec:focus {
+        background: transparent;
+        border-color: #ff6100;
+        color: #ff6100;
+      }
+      .btn_sec.btn_rev {
+        background: transparent;
+        border-color: #ff6100;
+        color: #ff6100;
+      }
+      .btn_sec.btn_rev:hover,
+      .btn_sec.btn_rev:focus {
+        background: #ff6100;
+        border-color: #ff6100;
+        color: #ffffff;
+      }
+
+      .btn_ter {
+        background: #3b3b40;
+        border: 2px solid #3b3b40;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .btn_ter:hover,
+      .btn_ter:focus {
+        background: transparent;
+        border-color: #3b3b40;
+        color: #3b3b40;
+      }
+      .btn_ter.btn_rev {
+        background: transparent;
+        border-color: #3b3b40;
+        color: #3b3b40;
+      }
+      .btn_ter.btn_rev:hover,
+      .btn_ter.btn_rev:focus {
+        background: #3b3b40;
+        border-color: #3b3b40;
+        color: #ffffff;
+      }
+
+      .btn_quad {
+        background: #66757a;
+        border: 2px solid #66757a;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .btn_quad:hover,
+      .btn_quad:focus {
+        background: transparent;
+        border-color: #66757a;
+        color: #66757a;
+      }
+      .btn_quad.btn_rev {
+        background: transparent;
+        border-color: #66757a;
+        color: #66757a;
+      }
+      .btn_quad.btn_rev:hover,
+      .btn_quad.btn_rev:focus {
+        background: #66757a;
+        border-color: #66757a;
+        color: #ffffff;
+      }
+
+      /* font styles */
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      h1 {
+        color: #000000;
+        font-family: sans-serif;
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: 500;
+      }
+      h2 {
+        color: #000000;
+        font-family: sans-serif;
+        font-size: 30px;
+        line-height: 33px;
+        font-weight: 500;
+      }
+      h3 {
+        color: #000000;
+        font-family: sans-serif;
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: 500;
+      }
+      h4 {
+        color: #000000;
+        font-family: sans-serif;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 500;
+      }
+      h5 {
+        color: #000000;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+      }
+      h6 {
+        color: #000000;
+        font-family: sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+      }
+      a:not(.btn) {
+        color: #000000;
+      }
+      a:not(.btn):hover,
+      a:not(.btn):focus {
+        color: #006199;
+      }
+
+      /* post styles */
+      #sidebar aside h1.widget-title,
+      #sidebar aside h2.widget-title,
+      .blog_thn_cont.ls,
+      .blog_thn_cont.lsb,
+      #comments .comment-meta {
+        border-color: #006199;
+      }
+
+      /* load more btn styles */
+      .btn_ld_mr,
+      a.page-numbers,
+      span.page-numbers {
+        background: #006199;
+        border: 2px solid #006199;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .btn_ld_mr:hover,
+      .btn_ld_mr:focus,
+      .page-numbers:hover,
+      .page-numbers:focus,
+      .page-numbers.current {
+        background: #ffffff;
+        border-color: #006199 !important;
+        color: #006199;
+      }
+
+      /* woocommerce styles */
+      .woocommerce-loop-product__title {
+        color: #000000;
+      }
+      .woocommerce div.product .summary .price,
+      .woocommerce ul.products li.product .price,
+      .woocommerce div.product form.cart .reset_variations {
+        color: #006199;
+      }
+      .woocommerce-message,
+      .woocommerce-info {
+        background: #3b3b40;
+        border-color: #006199;
+        color: #000000;
+      }
+      .woocommerce-message::before,
+      .woocommerce-info::before {
+        color: #006199;
+      }
+      .woocommerce a.button,
+      .woocommerce a.button.alt,
+      .woocommerce input.button,
+      .woocommerce button.button.alt,
+      .woocommerce input.button.alt,
+      .woocommerce div.product form.cart .button,
+      .woocommerce #respond input#submit,
+      .woocommerce a.added_to_cart,
+      .woocommerce a.added_to_cart:hover,
+      .woocommerce a.added_to_cart:focus,
+      .woocommerce #respond input#submit.alt.disabled,
+      .woocommerce #respond input#submit.alt.disabled:hover,
+      .woocommerce #respond input#submit.alt:disabled,
+      .woocommerce #respond input#submit.alt:disabled:hover,
+      .woocommerce #respond input#submit.alt:disabled[disabled],
+      .woocommerce #respond input#submit.alt:disabled[disabled]:hover,
+      .woocommerce a.button.alt.disabled,
+      .woocommerce a.button.alt.disabled:hover,
+      .woocommerce a.button.alt:disabled,
+      .woocommerce a.button.alt:disabled:hover,
+      .woocommerce a.button.alt:disabled[disabled],
+      .woocommerce a.button.alt:disabled[disabled]:hover,
+      .woocommerce button.button.alt.disabled,
+      .woocommerce button.button.alt.disabled:hover,
+      .woocommerce button.button.alt:disabled,
+      .woocommerce button.button.alt:disabled:hover,
+      .woocommerce button.button.alt:disabled[disabled],
+      .woocommerce button.button.alt:disabled[disabled]:hover,
+      .woocommerce input.button.alt.disabled,
+      .woocommerce input.button.alt.disabled:hover,
+      .woocommerce input.button.alt:disabled,
+      .woocommerce input.button.alt:disabled:hover,
+      .woocommerce input.button.alt:disabled[disabled],
+      .woocommerce input.button.alt:disabled[disabled]:hover {
+        background: #3b3b40;
+        border: 2px solid #3b3b40;
+        color: #006199;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+        line-height: 1.42857143;
+      }
+      .woocommerce a.button:hover,
+      .woocommerce a.button:focus,
+      .woocommerce a.button.alt:hover,
+      .woocommerce a.button.alt:focus,
+      .woocommerce button.button.alt:hover,
+      .woocommerce button.button.alt:focus,
+      .woocommerce input.button:hover,
+      .woocommerce input.button:focus,
+      .woocommerce input.button.alt:hover,
+      .woocommerce input.button.alt:focus,
+      .woocommerce div.product form.cart .button:hover,
+      .woocommerce div.product form.cart .button:focus,
+      .woocommerce #respond input#submit:hover,
+      .woocommerce #respond input#submit:focus,
+      .woocommerce a.added_to_cart {
+        background: transparent;
+        border-color: #3b3b40;
+        color: #3b3b40;
+      }
+
+      /* 404 page styles */
+      .cont404 h1 {
+        color: #006199;
+      }
+      .cont404 h1 span {
+        color: #6c757a;
+      }
+      .cont404 h3 {
+        color: #6c757a;
+      }
+      .cont404 .btn-404 {
+        background: #006199;
+        border: 2px solid #006199;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .cont404 .btn-404:hover,
+      .cont404 .btn-404:focus {
+        background: transparent;
+        border-color: #006199;
+        color: #006199;
+      }
+
+      /* footer styles */
+      footer {
+        background: #000000 url() no-repeat center/cover;
+      }
+      footer .footer {
+        background: #000000;
+      }
+      footer .footer,
+      footer .footer a:not(.btn) {
+        color: #3b3b40;
+      }
+      footer .c_r_cont,
+      footer .c_r_cont a {
+        background: #006199;
+        color: #ffffff;
+      }
+      footer .bt-top {
+        background: #006199;
+        border-color: #3b3b40;
+        color: #ffffff;
+      }
+      footer .bt-top:hover,
+      footer .bt-top:focus {
+        background: #006199;
+        border-color: #3b3b40;
+        color: #ffffff;
+      }
+
+      /* footer social styles */
+      footer .footer .social a,
+      footer .c_r_cont .social a {
+        background: #006199;
+        border: 2px solid #006199;
+        color: #ffffff;
+      }
+      footer .footer .social a:hover,
+      footer .c_r_cont .social a:hover,
+      footer .footer .social a:focus,
+      footer .c_r_cont .social a:focus {
+        background: #006199;
+        border-color: #006199;
+        color: #ffffff;
+      }
+      footer .footer .nav > li > a,
+      .c_r_cont .nav > li > a {
+        background: transparent;
+        color: #3b3b40;
+      }
+      footer .footer .nav > li > a:hover,
+      .c_r_cont .nav > li > a:hover,
+      footer .footer .nav > li > a:focus,
+      .c_r_cont .nav > li > a:focus {
+        background: transparent;
+        color: #006199;
+      }
+
+      /* footer btn styles */
+      .btn_bottom {
+        background: #006199;
+        border: 2px solid #006199;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+      .btn_bottom:hover,
+      .btn_bottom:focus {
+        background: #006199;
+        border-color: #006199;
+        color: #ffffff;
+      }
+
+      .custom_adminbar {
+        background: #000000;
+        color: #ffffff;
+      }
+      .custom_adminbar a {
+        color: #ffffff;
+      }
+      .custom_adminbar a:hover {
+        color: #3b3b40;
+      }
+      .custom_adminbar i {
+        color: #006199;
+      }
+
+      .ftr_cntct_cont > a {
+        background: #3b3b40;
+        color: #ffffff;
+      }
+      .ftr_cntct_cont > a i {
+        color: #ffffff;
+      }
+      .ftr_cntct_cont > a:hover,
+      .ftr_cntct_cont > a:focus,
+      .ftr_cntct_cont > a:active {
+        background: #3b3b40;
+        color: #006199;
+      }
+      .ftr_cntct_cont > a:hover i,
+      .ftr_cntct_cont > a:focus i,
+      .ftr_cntct_cont > a:active i {
+        color: #006199;
+      }
+      .ftr_cntct_cont .social {
+        background: #006199;
+      }
+      .ftr_cntct_cont .social a i {
+        color: #ffffff;
+      }
+      .ftr_cntct_cont .social a:hover i,
+      .ftr_cntct_cont .social a:focus i,
+      .ftr_cntct_cont .social a:active i {
+        color: #ffffff;
+      }
+      /* media menu styles */
+      @media (max-width: 830px) {
+        .navbar-toggle {
+          display: block;
+        }
+        .navbar-header.center .navbar-toggle {
+          display: inline-block;
+        }
+        .mbl_slidein.navbar-collapse.mbl_right {
+          right: -275px;
+          transition: all 0.3s ease-in-out;
+        }
+        body.push-right .mbl_slidein.navbar-collapse.mbl_right {
+          right: 0px;
+          z-index: 10;
+        }
+        .mbl_slidein.navbar-collapse.mbl_left {
+          left: -275px;
+          transition: all 0.3s ease-in-out;
+        }
+        body.push-left .mbl_slidein.navbar-collapse.mbl_left {
+          left: 0px;
+          z-index: 10;
+        }
+        .mbl_slidein.navbar-collapse,
+        .mbl_slidein.navbar-collapse.collapsing,
+        .mbl_slidein.navbar-collapse.collapse.in {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          padding-top: 55px;
+          width: 275px;
+          z-index: -1;
+          overflow-y: scroll;
+        }
+        .navbar-collapse.collapse.mbl_slidein {
+          display: block;
+          visibility: visible;
+        }
+        nav .nav.navbar-right,
+        nav .nav.navbar-left,
+        .topbar .nav.navbar-right,
+        .topbar .nav.navbar-left {
+          float: none !important;
+        }
+        nav .nav > li,
+        .topbar .nav > li {
+          float: none;
+        }
+        nav .nav > li > a,
+        .topbar .nav > li > a,
+        .search_bar {
+          padding: 10px 15px;
+        }
+        .navbar-collapse.collapse.mbl_slidein,
+        nav .nav > li ul,
+        .topbar .nav > li ul,
+        nav .nav li.megamenu > ul {
+          display: block;
+          visibility: visible;
+        }
+        nav .nav > li ul,
+        nav .nav li.megamenu > ul {
+          display: block;
+          position: relative;
+        }
+        nav .nav li.megamenu > ul > li.col_1_2,
+        nav .nav li.megamenu > ul > li.col_1_3,
+        nav .nav li.megamenu > ul > li.col_1_4,
+        nav .nav li.megamenu > ul > li.col_2_3,
+        nav .nav li.megamenu > ul > li.col_3_4 {
+          width: 100%;
+          float: none;
+        }
+        nav .nav > li > ul a,
+        .topbar .nav > li > ul a,
+        .mega_head > a {
+          text-align: center !important;
+        }
+        nav .nav li.megamenu > ul > li > ul > li > ul {
+          display: none;
+        }
+        .mbl_slidein.navbar-collapse,
+        nav .nav > li ul {
+          background: #000000;
+        }
+        nav .nav > li > a,
+        nav .nav > li ul a,
+        .topbar .nav > li > a,
+        .topbar .nav > li ul a {
+          background: transparent;
+          color: #e2e4e6;
+        }
+        nav .nav > li > a:hover,
+        nav .nav > li > a:focus,
+        nav .nav > li > a:active,
+        .topbar .nav > li > a:hover,
+        .topbar .nav > li > a:focus,
+        .topbar .nav > li > a:active {
+          background: transparent;
+          color: #e2e4e6;
+        }
+        .nav li.dropdown {
+          position: static;
+        }
+        .nav li.dropdown > a {
+          margin-right: 55px;
+        }
+        .nav li.dropdown:before {
+          content: "";
+          display: block;
+          font-family: "Font Awesome 5 Free";
+          font-weight: bold;
+          padding: 10px 15px;
+          margin-right: 15px;
+          float: right;
+        }
+        .nav li.dropdown > ul,
+        .nav li.dropdown:hover > ul {
+          display: none;
+        }
+        .nav li.dropdown.opened:before {
+          content: "";
+        }
+        .nav li.dropdown.opened > ul {
+          display: block;
+        }
+      }
+      @media (max-width: 1330px) {
+        .inner_cont,
+        .row > .inner_cont {
+          max-width: 100%;
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+      }
+      @media (max-width: 960px) {
+        h1 {
+          font-size: 36px;
+          line-height: 40px;
+        }
+        h2 {
+          font-size: 30px;
+          line-height: 33px;
+        }
+        h3 {
+          font-size: 24px;
+          line-height: 26px;
+        }
+        h4 {
+          font-size: 18px;
+          line-height: 20px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 18px;
+        }
+        h6 {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 36px;
+          line-height: 40px;
+        }
+        h2 {
+          font-size: 30px;
+          line-height: 33px;
+        }
+        h3 {
+          font-size: 24px;
+          line-height: 26px;
+        }
+        h4 {
+          font-size: 18px;
+          line-height: 20px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 18px;
+        }
+        h6 {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 36px;
+          line-height: 40px;
+        }
+        h2 {
+          font-size: 30px;
+          line-height: 33px;
+        }
+        h3 {
+          font-size: 24px;
+          line-height: 26px;
+        }
+        h4 {
+          font-size: 18px;
+          line-height: 20px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 18px;
+        }
+        h6 {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    </style>
+    <script
+      id="jquery-js"
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      id="owl-carousel-js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="index">
+    <div class="dj_container">
+      <div class="topbar">
+        <div class="inner_cont">
+          <div class="cont-center cont">
+            <div class="pel_cont inline pel">
+              <span><i class="fa fa-phone"></i> <span>123-456-7890</span></span>
+
+              <span class="sep"> | </span>
+
+              <span
+                ><i class="fa fa-envelope"></i> <span>test@test.ca</span></span
+              >
+
+              <span class="sep"> | </span>
+
+              <span
+                ><i class="fa fa-map-marker-alt"></i> <span>test</span></span
+              >
+            </div>
+          </div>
+
+          <div class="cont-right cont">
+            <div class="social round">
+              <a href="#" target="_blank"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+
+              <a href="#" target="_blank"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar-st sticky normal right">
+        <div class="inner_cont">
+          <div class="cont-left cont">
+            <a href="/"
+              ><img
+                class="logo logo_medium max_width"
+                src="/assets/images/logo.png"
+                alt="logo"
+            /></a>
+          </div>
+
+          <div class="cont-right cont">
+            <div class="navbar-header right mbl_slidein">
+              <button
+                type="button"
+                class="navbar-toggle collapsed mbl_right"
+                data-toggle="collapse"
+                data-target=".navbar-coll"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse right mbl_slidein mbl_right">
+              <!-- in menu file -->
+
+              <button
+                type="button"
+                class="navbar-toggle mbl_right opened"
+                data-toggle="collapse"
+                data-target=".navbar-coll"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <ul class="nav navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item menu-item-has-children">
+                  <a class="nav-link" href="/about">About</a>
+                  <ul class="nav sub-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/work">Work</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="btn_cont">
+              <a class="btn btn_top" href="test" target="_self">test</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main data-sb-object-id="src\pages\index.json">
+        <div
+          class="row elm_5340 column_gap_5 equal_height"
+          id=""
+          data-sb-field-path="sections.0"
+        >
+          <div class="inner_cont">
+            <div
+              class="col-sm-6"
+              id=""
+              data-sb-field-path="sections.0.columns.0"
+            >
+              <div
+                class="column_inner elm_971"
+                data-sb-field-path="sections.0.columns.0"
+              >
+                <div class="wrapper" data-sb-field-path="sections.0.columns.0">
+                  <h1
+                    class="elm_4787"
+                    id=""
+                    data-sb-field-path="sections.0.columns.0.content.0"
+                  >
+                    Home Page
+                  </h1>
+
+                  <p
+                    class="elm_4848"
+                    data-sb-field-path="sections.0.columns.0.content.1"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </p>
+
+                  <h2
+                    class="elm_9885"
+                    id=""
+                    data-sb-field-path="sections.0.columns.0.content.2"
+                  >
+                    Heading 2
+                  </h2>
+
+                  <p
+                    class="elm_3917"
+                    data-sb-field-path="sections.0.columns.0.content.3"
+                  >
+                    In elit Lorem eiusmod laboris nisi ut. Est amet et aute ad.
+                    Ex eiusmod minim cillum magna amet pariatur incididunt
+                    consequat ullamco.
+                  </p>
+
+                  <h3
+                    class="elm_137"
+                    id=""
+                    data-sb-field-path="sections.0.columns.0.content.4"
+                  >
+                    Heading 3
+                  </h3>
+
+                  <p
+                    class="elm_3955"
+                    data-sb-field-path="sections.0.columns.0.content.5"
+                  >
+                    Labore dolor sunt ad irure excepteur voluptate excepteur
+                    cupidatat reprehenderit id Lorem labore sunt. Culpa quis ex
+                    cupidatat dolor fugiat culpa incididunt eiusmod id in culpa
+                    fugiat. Nostrud magna sunt consectetur proident et dolor
+                    commodo. Ea occaecat nisi laborum officia in Lorem eu eu
+                    aute reprehenderit.
+                  </p>
+
+                  <h4
+                    class="elm_3837"
+                    id=""
+                    data-sb-field-path="sections.0.columns.0.content.6"
+                  >
+                    Heading 4
+                  </h4>
+
+                  <p
+                    class="elm_9990"
+                    data-sb-field-path="sections.0.columns.0.content.7"
+                  >
+                    Eu sunt irure consequat tempor qui consequat ex duis. Ex
+                    excepteur aliquip consequat est minim magna enim officia
+                    occaecat culpa ullamco deserunt. Tempor veniam occaecat do
+                    culpa labore enim duis. Eu reprehenderit aliquip
+                    exercitation amet nisi esse ullamco laboris adipisicing.
+                    Exercitation et eiusmod duis id sunt aute qui enim Lorem
+                    consequat proident.
+                  </p>
+
+                  <h5
+                    class="elm_4454"
+                    id=""
+                    data-sb-field-path="sections.0.columns.0.content.8"
+                  >
+                    Heading 5
+                  </h5>
+
+                  <p
+                    class="elm_5805"
+                    data-sb-field-path="sections.0.columns.0.content.9"
+                  >
+                    Eu sunt irure consequat tempor qui consequat ex duis. Ex
+                    excepteur aliquip consequat est minim magna enim officia
+                    occaecat culpa ullamco deserunt. Tempor veniam occaecat do
+                    culpa labore enim duis. Eu reprehenderit aliquip
+                    exercitation amet nisi esse ullamco laboris adipisicing.
+                    Exercitation et eiusmod duis id sunt aute qui enim Lorem
+                    consequat proident.
+                  </p>
+
+                  <h6
+                    class="elm_3348"
+                    id=""
+                    data-sb-field-path="sections.0.columns.0.content.10"
+                  >
+                    Heading 6
+                  </h6>
+
+                  <p
+                    class="elm_9531"
+                    data-sb-field-path="sections.0.columns.0.content.11"
+                  >
+                    Eu sunt irure consequat tempor qui consequat ex duis. Ex
+                    excepteur aliquip consequat est minim magna enim officia
+                    occaecat culpa ullamco deserunt. Tempor veniam occaecat do
+                    culpa labore enim duis. Eu reprehenderit aliquip
+                    exercitation amet nisi esse ullamco laboris adipisicing.
+                    Exercitation et eiusmod duis id sunt aute qui enim Lorem
+                    consequat proident.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-6"
+              id=""
+              data-sb-field-path="sections.0.columns.1"
+            >
+              <div
+                class="column_inner elm_3547"
+                data-sb-field-path="sections.0.columns.1"
+              >
+                <div class="wrapper" data-sb-field-path="sections.0.columns.1">
+                  <style>
+                    .elm_8428 {
+                      height: 35px;
+                    }
+                  </style>
+                  <div
+                    class="empty_space elm_8428"
+                    data-sb-field-path="sections.0.columns.1.content.0"
+                  >
+                    <span></span>
+                  </div>
+
+                  <style>
+                    .elm_4551 {
+                      margin-bottom: 35px;
+                    }
+                    .elm_4551 .icon_inner {
+                      border: 2px solid #efefef;
+                    }
+                    .elm_4551 i {
+                      color: #006199;
+                    }
+                  </style>
+                  <div
+                    class="icon_outer elm_4551 center"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.1"
+                  >
+                    <div class="icon_inner outline-circle size_normal center">
+                      <i class="icon fa fa-mail-bulk"></i>
+                    </div>
+                  </div>
+
+                  <style>
+                    .elm_5785 {
+                      margin-bottom: 35px;
+                    }
+                    .separator.elm_5785 [class*="sep_holder_"] .sep_line {
+                      border-color: #006199;
+                    }
+                  </style>
+                  <div
+                    class="separator elm_5785 ttl_center sep_center sep_border sep_border_ sep_width_"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.2"
+                  >
+                    <span class="sep_holder_l"
+                      ><span class="sep_line"></span
+                    ></span>
+
+                    <h4>test</h4>
+
+                    <span class="sep_holder_r"
+                      ><span class="sep_line"></span
+                    ></span>
+                  </div>
+
+                  <table
+                    class="pel_cont table pel style_free elm_6340"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.3"
+                  >
+                    <tr>
+                      <td>123-456-7890</td>
+                    </tr>
+
+                    <tr>
+                      <td>test@test.ca</td>
+                    </tr>
+
+                    <tr>
+                      <td>test</td>
+                    </tr>
+                  </table>
+
+                  <div
+                    class="social round elm_3013"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.4"
+                  >
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-facebook-square"></i
+                    ></a>
+
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-twitter-square"></i
+                    ></a>
+
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+
+                  <table
+                    class="table style_free hours elm_2685"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.5"
+                  >
+                    <tr>
+                      <th>Mon - Fri</th>
+                      <td>7-3</td>
+                    </tr>
+
+                    <tr>
+                      <th>Sat - Sun</th>
+                      <td>Closed</td>
+                    </tr>
+                  </table>
+
+                  <style>
+                    .elm_1980 {
+                      margin-bottom: 35px;
+                    }
+                    .elm_1980 .hoverbox_info_cont {
+                      background-color: rgba(0, 97, 153, 0.8);
+                      color: #fff;
+                    }
+                    .elm_1980 .hoverbox_info_cont h3 {
+                    }
+                    .elm_1980 .hoverbox_info_cont a {
+                      background-color: #006199;
+                      color: #fff;
+                    }
+                  </style>
+                  <div
+                    class="hoverbox_cont elm_1980"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.6"
+                  >
+                    <img src="/assets\images\retro.jpg" alt="" width="100%" />
+
+                    <div class="hoverbox_info_cont">
+                      <span class="hoverbox_info">
+                        <h3>test</h3>
+                        <p>test</p>
+
+                        <a class="link" href="/about" target="_self">about</a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <style>
+                    .elm_4863 {
+                      margin-bottom: 35px;
+                    }
+                    .elm_4863 a {
+                      color: #006199;
+                    }
+                    .elm_4863 a:hover,
+                    a:focus,
+                    a:active {
+                      color: #996100;
+                    }
+                  </style>
+                  <script>
+                    jQuery("body").append(
+                      '<div class="dj-popup-wrapper" id="dj_ppv_3507" style="display: none;">  <div class="dj-popup-close">x</div>  <iframe class="dj-popup-video" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe></div>'
+                    );
+                  </script>
+                  <div
+                    class="vid_popup_cont elm_4863"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.7"
+                  >
+                    <center>
+                      <a
+                        href="https://www.youtube.com/embed/mC-zw0zCCtg?si=WKCTv0uqEEjCp-A2?rel=0&showinfo=0&autoplay=1"
+                        class="fa fa-play"
+                        data-lightbox="vecta-video"
+                        data-video="https://www.youtube.com/embed/mC-zw0zCCtg?si=WKCTv0uqEEjCp-A2?rel=0&showinfo=0&autoplay=1"
+                      ></a>
+                    </center>
+                  </div>
+
+                  <style>
+                    .elm_4840 {
+                      margin-bottom: 35px;
+                    }
+                    .elm_4840 .r_m_l-content.cls {
+                      height: 20px;
+                      overflow: hidden;
+                    }
+                  </style>
+
+                  <div
+                    class="r_m_l-wrapper btn_pos_left elm_4840"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.8"
+                  >
+                    <div class="r_m_l-btn">
+                      <a
+                        class="rml_btn"
+                        href="#"
+                        data-open-text="Click to Expand"
+                        data-close-text="Click to Contract"
+                        ><i class="fa fa-long-arrow-down"></i>Click to Expand</a
+                      >
+                    </div>
+                    <div class="r_m_l-content cls">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                      dapibus leo.
+                    </div>
+                  </div>
+
+                  <style>
+                    .elm_7066 {
+                      margin-bottom: 35px;
+                    }
+                  </style>
+                  <div
+                    class="textslider owl-carousel owl-theme elm_7066"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.9"
+                  >
+                    <div class="item">
+                      <h2>Test Slide1</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                        dapibus leo.
+                      </p>
+                    </div>
+
+                    <div class="item">
+                      <h2>Test Slide2</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                        dapibus leo.
+                      </p>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    var $ = jQuery;
+                    $(".textslider").owlCarousel({
+                      loop: true,
+                      center: true,
+                      margin: 10,
+                      nav: false,
+                      dots: false,
+                      items: 1,
+                    });
+                  </script>
+
+                  <a
+                    href="/about"
+                    target="_self"
+                    class="btn btn_prim"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.10"
+                  >
+                    Primary
+                  </a>
+
+                  <a
+                    href="/about"
+                    target="_self"
+                    class="btn btn_prim btn_rev"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.11"
+                  >
+                    Primary Reverse
+                  </a>
+
+                  <style>
+                    .elm_171 {
+                      height: 10px;
+                    }
+                  </style>
+                  <div
+                    class="empty_space elm_171"
+                    data-sb-field-path="sections.0.columns.1.content.12"
+                  >
+                    <span></span>
+                  </div>
+
+                  <a
+                    href="#"
+                    target="_self"
+                    class="btn btn_sec"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.13"
+                  >
+                    Secondary
+                  </a>
+
+                  <a
+                    href="/about"
+                    target="_self"
+                    class="btn btn_sec btn_rev"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.14"
+                  >
+                    Secondary Reverse
+                  </a>
+
+                  <style>
+                    .elm_1894 {
+                      height: 10px;
+                    }
+                  </style>
+                  <div
+                    class="empty_space elm_1894"
+                    data-sb-field-path="sections.0.columns.1.content.15"
+                  >
+                    <span></span>
+                  </div>
+
+                  <a
+                    href="#"
+                    target="_self"
+                    class="btn btn_ter"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.16"
+                  >
+                    Tertiary
+                  </a>
+
+                  <a
+                    href="/about"
+                    target="_self"
+                    class="btn btn_ter btn_rev"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.17"
+                  >
+                    Tertiary Reverse
+                  </a>
+
+                  <style>
+                    .elm_6482 {
+                      height: 10px;
+                    }
+                  </style>
+                  <div
+                    class="empty_space elm_6482"
+                    data-sb-field-path="sections.0.columns.1.content.18"
+                  >
+                    <span></span>
+                  </div>
+
+                  <a
+                    href="#"
+                    target="_self"
+                    class="btn btn_quad"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.19"
+                  >
+                    Quaternary
+                  </a>
+
+                  <a
+                    href="/about"
+                    target="_self"
+                    class="btn btn_quad btn_rev"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.20"
+                  >
+                    Quaternary Reverse
+                  </a>
+
+                  <style>
+                    .elm_2805{margin-top:35px;;;;;;;;;;;;;;;;;;}
+                    .elm_2805 .nav-tabs>li:not(.active)>a,
+                    .panel-heading{background-color: #006199; border-color: #006199; color: #ffffff;}
+                    .elm_2805 .nav-tabs>li:not(.active)>a:hover,
+                    .elm_2805 .nav-tabs>li:not(.active)>a:focus,
+                    .elm_2805 .nav-tabs>li:not(.active)>a:active{background-color: rgb(-25 72 128); border-color: #background-color: #006199; border-color: #006199; color: #ffffff; color: #ffffff;}
+
+                    .elm_2805 .panel-default>.panel-heading.collapsed{background-color: #006199; border-color: #006199; color: #ffffff;}
+                    .elm_2805 .panel-default>.panel-heading.collapsed:hover,
+                    .elm_2805 .panel-default>.panel-heading.collapsed:focus,
+                    .elm_2805 .panel-default>.panel-heading.collapsed:active{background-color: rgb(-25 72 128); border-color: #background-color: #006199; border-color: #006199; color: #ffffff; color: #ffffff;}
+                    @media(max-width: 767px){
+                        .elm_2805 .panel.panel-default{border-color: #006199;}
+                        .elm_2805 .panel.panel-default:hover,
+                        .elm_2805 .panel.panel-default:focus,
+                        .elm_2805 .panel.panel-default:active{border-color: rgb(-25 72 128);}
+                    }
+                  </style>
+                  <div
+                    class="tabs elm_2805 rounded left"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.21"
+                  >
+                    <ul class="nav nav-tabs">
+                      <li role="presentation" class="active">
+                        <a
+                          data-toggle="tab"
+                          href="#tab-0"
+                          data-sb-field-path="sections.0.columns.1.content.21.tabs.0"
+                          >Tab</a
+                        >
+                      </li>
+
+                      <li role="presentation">
+                        <a
+                          data-toggle="tab"
+                          href="#tab-1"
+                          data-sb-field-path="sections.0.columns.1.content.21.tabs.1"
+                          >Tab 2</a
+                        >
+                      </li>
+                    </ul>
+
+                    <div class="tab-content panel-group" id="tabs-accordion">
+                      <div
+                        id="tab-0"
+                        class="panel panel-default tab-pane fade in active"
+                      >
+                        <a
+                          class="panel-heading panel-title"
+                          data-toggle="collapse"
+                          data-parent="#tabs-accordion"
+                          href="#tab-panel-0"
+                          data-sb-field-path="sections.0.columns.1.content.21.tabs.0"
+                          >Tab</a
+                        >
+
+                        <div
+                          id="tab-panel-0"
+                          class="panel-collapse collapse in"
+                        >
+                          <div class="panel-body">Tab Text</div>
+                        </div>
+                      </div>
+
+                      <div id="tab-1" class="panel panel-default tab-pane fade">
+                        <a
+                          class="panel-heading panel-title collapsed"
+                          data-toggle="collapse"
+                          data-parent="#tabs-accordion"
+                          href="#tab-panel-1"
+                          data-sb-field-path="sections.0.columns.1.content.21.tabs.1"
+                          >Tab 2</a
+                        >
+
+                        <div id="tab-panel-1" class="panel-collapse collapse">
+                          <div class="panel-body">Tab 2 Text</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <style>
+                    .elm_4720 {
+                    }
+                    .elm_4720 .panel-default > .panel-heading.collapsed {
+                      background-color: #006199;
+                      border-color: #006199;
+                      color: #ffffff;
+                    }
+                    .elm_4720 .panel.panel-default {
+                      border-color: #006199;
+                    }
+                    .elm_4720 .panel-default > .panel-heading.collapsed:hover,
+                    .elm_4720 .panel-default > .panel-heading.collapsed:focus,
+                    .elm_4720 .panel-default > .panel-heading.collapsed:active {
+                      background-color: rgb(-25 72 128);
+                      border-color: rgb(-25 72 128);
+                      color: #ffffff;
+                    }
+                    .elm_4720 .panel.panel-default:hover,
+                    .elm_4720 .panel.panel-default:focus,
+                    .elm_4720 .panel.panel-default:active {
+                      border-color: rgb(-25 72 128);
+                    }
+                  </style>
+                  <div
+                    class="accordion elm_4720 rounded left"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.22"
+                  >
+                    <div class="panel-group" id="accordion">
+                      <div id="tab-0" class="panel panel-default">
+                        <a
+                          class="panel-heading panel-title"
+                          data-toggle="collapse"
+                          data-parent="#accordion"
+                          href="#panel-0"
+                          data-sb-field-path="sections.0.columns.1.content.22.tabs.0"
+                          >Accordion Tab</a
+                        >
+                        <div id="panel-0" class="panel-collapse collapse in">
+                          <div class="panel-body">Accordion Tab Text</div>
+                        </div>
+                      </div>
+
+                      <div id="tab-1" class="panel panel-default">
+                        <a
+                          class="panel-heading panel-title collapsed"
+                          data-toggle="collapse"
+                          data-parent="#accordion"
+                          href="#panel-1"
+                          data-sb-field-path="sections.0.columns.1.content.22.tabs.1"
+                          >Accordion Tab 2</a
+                        >
+                        <div id="panel-1" class="panel-collapse collapse">
+                          <div class="panel-body">Accordion Tab 2 Text</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <style>
+                    .elm_3270 {
+                      margin-bottom: 35px;
+                    }
+                  </style>
+                  <div
+                    class="cta_cont elm_3270 right width_100"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.23"
+                  >
+                    <div class="cta_content left">
+                      <h2>Main Heading</h2>
+                      <h4>Sub Heading</h4>
+                      <p>
+                        Eu sunt irure consequat tempor qui consequat ex duis. Ex
+                        excepteur aliquip consequat est minim magna enim officia
+                        occaecat culpa ullamco deserunt. Tempor veniam occaecat
+                        do culpa labore enim duis. Eu reprehenderit aliquip
+                        exercitation amet nisi esse ullamco laboris adipisicing.
+                        Exercitation et eiusmod duis id sunt aute qui enim Lorem
+                        consequat proident.
+                      </p>
+                    </div>
+
+                    <div class="cta_actions inline">
+                      <a class="btn btn_prim" href="#" target="_self">Text</a>
+                    </div>
+                  </div>
+
+                  <style>
+                    .elm_7865 {
+                      margin-bottom: 35px;
+                    }
+                  </style>
+                  <div
+                    class="image_cont elm_7865 none"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.24"
+                  >
+                    <a
+                      class="link"
+                      href="/assets\images\retro.jpg"
+                      target="_self"
+                      data-lightbox="vecta-elm_7865"
+                    >
+                      <img src="/assets\images\retro.jpg" alt="" width="100%" />
+                    </a>
+                  </div>
+
+                  <style>
+                    .elm_4333 {
+                      margin-bottom: 35px;
+                    }
+                  </style>
+                  <div
+                    class="image-carousel owl-carousel owl-theme elm_4333"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.25"
+                  >
+                    <div class="item">
+                      <div
+                        class="image_cont"
+                        id=""
+                        data-sb-field-path="sections.0.columns.1.content.25.images.0"
+                      >
+                        <a
+                          class="link"
+                          href="/assets\images\retro.jpg"
+                          target="_self"
+                          data-lightbox="vecta-elm_4333"
+                        >
+                          <img
+                            src="/assets\images\retro.jpg"
+                            alt=""
+                            width="100%"
+                          />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div
+                        class="image_cont"
+                        id=""
+                        data-sb-field-path="sections.0.columns.1.content.25.images.1"
+                      >
+                        <a
+                          class="link"
+                          href="/assets\images\retro.jpg"
+                          target="_self"
+                          data-lightbox="vecta-elm_4333"
+                        >
+                          <img
+                            src="/assets\images\retro.jpg"
+                            alt=""
+                            width="100%"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    var $ = jQuery;
+                    $(".image-carousel").owlCarousel({
+                      loop: true,
+                      margin: 10,
+                      nav: true,
+                      dots: true,
+                      navText: [
+                        '<i class="fa fa-arrow-left"></i>',
+                        '<i class="fa fa-arrow-right"></i>',
+                      ],
+                      autoplay: false,
+                      responsive: {
+                        0: {
+                          items: 1,
+                        },
+                        // breakpoint from 480 up
+                        670: {
+                          items: 2,
+                        },
+                        // breakpoint from 768 up
+                        960: {
+                          items: 3,
+                        },
+                      },
+                    });
+                  </script>
+
+                  <div
+                    class="image-gallery-cont elm_6827 cols_3"
+                    id=""
+                    data-sb-field-path="sections.0.columns.1.content.26"
+                  >
+                    <div
+                      class="image_cont"
+                      id=""
+                      data-sb-field-path="sections.0.columns.1.content.26.images.0"
+                    >
+                      <a
+                        class="link"
+                        href="/assets\images\retro.jpg"
+                        target="_self"
+                        data-lightbox="vecta-elm_6827"
+                      >
+                        <img
+                          src="/assets\images\retro.jpg"
+                          alt=""
+                          width="100%"
+                        />
+                      </a>
+                    </div>
+
+                    <div
+                      class="image_cont"
+                      id=""
+                      data-sb-field-path="sections.0.columns.1.content.26.images.1"
+                    >
+                      <a
+                        class="link"
+                        href="/assets\images\retro.jpg"
+                        target="_self"
+                        data-lightbox="vecta-elm_6827"
+                      >
+                        <img
+                          src="/assets\images\retro.jpg"
+                          alt=""
+                          width="100%"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="normal right">
+        <div class="footer">
+          <div class="inner_cont">
+            <div class="cont-left cont">
+              <a href="/"
+                ><img
+                  class="logo logo_medium max_width"
+                  src="/assets/images/logo.png"
+                  alt="logo"
+              /></a>
+            </div>
+
+            <div class="cont-center cont">
+              <div class="pel_cont inline pel">
+                <span
+                  ><i class="fa fa-phone"></i> <span>123-456-7890</span></span
+                >
+
+                <span class="sep"> | </span>
+
+                <span
+                  ><i class="fa fa-envelope"></i>
+                  <span>test@test.ca</span></span
+                >
+
+                <span class="sep"> | </span>
+
+                <span
+                  ><i class="fa fa-map-marker-alt"></i> <span>test</span></span
+                >
+              </div>
+            </div>
+
+            <div class="cont-right cont">
+              <div class="social round">
+                <a href="#" target="_blank"
+                  ><i class="fab fa-facebook-square"></i
+                ></a>
+
+                <a href="#" target="_blank"
+                  ><i class="fab fa-twitter-square"></i
+                ></a>
+
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c_r_cont">
+          <div class="inner_cont">
+            <div class="cont-center cont">
+              <address>
+                Copyright © |
+                <a
+                  href="https://cowlickstudios.com/website-design/"
+                  target="_blank"
+                  >Website Design</a
+                >
+                By
+                <a href="https://cowlickstudios.com/" target="_blank"
+                  >Cowlick Studios</a
+                >
+              </address>
+            </div>
+          </div>
+        </div>
+        <span class="bt-top round"><i class="fa fa-angle-up"></i></span>
+      </footer>
+    </div>
+    <style>
+      .elm_5340 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #006199;
+      }
+      .elm_971 {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        background-color: #81d742;
+      }
+      .elm_3547 {
+        padding-bottom: 35px;
+        background-color: #dd3333;
+      }
+    </style>
+    <script
+      id="bootstrap-js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      id="main-js"
+      src="https://cdn.jsdelivr.net/gh/danyg790/CMSFiles@main/assets/js/main.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      id="dj-lightbox-js"
+      src="https://cdn.jsdelivr.net/gh/danyg790/dj-lightbox@main/dist/js/dj-lightbox.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
